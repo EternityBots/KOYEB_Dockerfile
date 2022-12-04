@@ -7,10 +7,10 @@ RUN sudo dnf -y update &&\
 
 RUN git clone https://github.com/EternityBots/Nezuko /root/EternityBots
 
-RUN sudo npm install supervisor -g
+RUN sudo npm install pm2 -g
 
 WORKDIR /root/EternityBots
 
 RUN yarn
 
-CMD ["supervisor","heart.js"]
+CMD ["npm","start"]
