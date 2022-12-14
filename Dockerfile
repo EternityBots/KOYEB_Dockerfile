@@ -5,12 +5,5 @@ RUN sudo dnf -y update &&\
     sudo dnf install -y git ffmpeg ImageMagick nodejs yarnpkg libwebp &&\
     sudo dnf clean all -y
 
-RUN git clone https://github.com/EternityBots/Nezuko /root/EternityBots
-
 RUN sudo npm install forever -g
 
-WORKDIR /root/EternityBots
-
-RUN yarn
-
-CMD ["node","koyeb.js"]
